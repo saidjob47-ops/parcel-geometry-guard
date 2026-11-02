@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parcel-geometry-guard"
+version = "0.1.0"
+description = "Zero-dependency 2D polygon geometry audit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "saidjob47-ops"}]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+parcel-geometry-guard = "parcel_geometry_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
